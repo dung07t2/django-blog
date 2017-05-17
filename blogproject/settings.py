@@ -195,7 +195,7 @@ STATICFILES_FINDERS = (
 )
 
 STATIC_URL = '/static/'
-STATIC_ROOT =  BASE_DIR + '/www'
+STATIC_ROOT =  'staticfiles'
 
 MEDIA_URL = '/media/'
 #MEDIA_ROOT = '/home/rayleigh/python/workspace/media'
