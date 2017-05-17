@@ -196,7 +196,7 @@ STATICFILES_FINDERS = (
 
 STATIC_URL = '/static/'
 STATIC_ROOT =  BASE_DIR + '/static'
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 #MEDIA_ROOT = '/home/rayleigh/python/workspace/media'
