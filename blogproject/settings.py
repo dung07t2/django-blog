@@ -15,7 +15,7 @@ import dj_database_url
 from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 #print(BASE_DIR)
 
@@ -186,7 +186,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, 'static'),
 )
 #print(STATICFILES_DIRS)
 STATICFILES_FINDERS = (
@@ -195,7 +195,8 @@ STATICFILES_FINDERS = (
 )
 
 STATIC_URL = '/static/'
-STATIC_ROOT =  'staticfiles'
+STATIC_ROOT =  os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 #MEDIA_ROOT = '/home/rayleigh/python/workspace/media'
