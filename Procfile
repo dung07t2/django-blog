@@ -1,2 +1,2 @@
-web: gunicorn blogproject.wsgi.application --log-file - 
+web: gunicorn blogproject.wsgi --log-file - 
 ps:scale web=1
