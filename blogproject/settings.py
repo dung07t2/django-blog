@@ -22,11 +22,11 @@ print(BASE_DIR)
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'site_secret_key'
+SECRET_KEY = 't=2_ihpf_)vyv)-9kvuy74qe83&!8n8%b@@t^o)chb8q#(rg)%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://dunglehuy.herokuapp.com/','127.0.0.1']
 SITE_ID = 1
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
