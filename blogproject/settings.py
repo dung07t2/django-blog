@@ -186,7 +186,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATICFILES_DIRS = [
-    "/static",
+    BASE_DIR + '/static',
 ]
 #print(STATICFILES_DIRS)
 STATICFILES_FINDERS = (
