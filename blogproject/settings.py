@@ -11,21 +11,23 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+import dj_database_url
+from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-print(BASE_DIR)
+#print(BASE_DIR)
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 't=2_ihpf_)vyv)-9kvuy74qe83&!8n8%b@@t^o)chb8q#(rg)%'
+#SECRET_KEY = 't=2_ihpf_)vyv)-9kvuy74qe83&!8n8%b@@t^o)chb8q#(rg)%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
 ALLOWED_HOSTS = ['https://dunglehuy.herokuapp.com/','127.0.0.1']
 SITE_ID = 1
 EMAIL_HOST = 'smtp.gmail.com'
@@ -133,17 +135,24 @@ DATABASES = {
 # postgres=# GRANT ALL PRIVILEGES ON DATABASE database_nme TO database_user;
 # See this docs for more; https://goo.gl/9ONJKX
 
+#DATABASES = {
+    #'default': {
+        #'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #'NAME': 'postgres',
+        #'USER': 'postgres',
+        #'PASSWORD': '123456',
+        ##'HOST': '127.0.0.1',
+        ##'PORT': '5432',
+    #}
+#}
+#configure to deploy heroku
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': '123456',
-        #'HOST': '127.0.0.1',
-        #'PORT': '5432',
-    }
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
