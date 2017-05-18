@@ -16,7 +16,7 @@ from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-#PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 print(BASE_DIR)
 
 
@@ -24,10 +24,10 @@ print(BASE_DIR)
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 't=2_ihpf_)vyv)-9kvuy74qe83&!8n8%b@@t^o)chb8q#(rg)%'
+SECRET_KEY = 'e6%mqzzrd*0*29plyx)+jfpc1c8(hxzqmt9(n_yco@uu@k@91n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 SITE_ID = 1
 EMAIL_HOST = 'smtp.gmail.com'
@@ -146,13 +146,13 @@ DATABASES = {
     #}
 #}
 #configure to deploy heroku
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
-DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
-}
+#SECRET_KEY = config('SECRET_KEY')
+#DEBUG = config('DEBUG', default=False, cast=bool)
+#DATABASES = {
+    #'default': dj_database_url.config(
+        #default=config('DATABASE_URL')
+    #)
+#}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -195,7 +195,7 @@ STATICFILES_FINDERS = (
 )
 
 STATIC_URL = '/static/'
-STATIC_ROOT =  BASE_DIR + '/www'
+STATIC_ROOT =  PROJECT_ROOT + '/static'
 #STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
