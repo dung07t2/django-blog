@@ -28,7 +28,7 @@ print(BASE_DIR)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
-ALLOWED_HOSTS = ['https://dunglehuy.herokuapp.com/','127.0.0.1']
+ALLOWED_HOSTS = ['*']
 SITE_ID = 1
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
