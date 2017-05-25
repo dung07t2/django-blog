@@ -24,7 +24,7 @@ print(BASE_DIR)
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'e6%mqzzrd*0*29plyx)+jfpc1c8(hxzqmt9(n_yco@uu@k@91n'
+# SECRET_KEY = 'e6%mqzzrd*0*29plyx)+jfpc1c8(hxzqmt9(n_yco@uu@k@91n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -186,7 +186,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "blogproject/static"),
+    os.path.join(BASE_DIR, "static"),
 ]
 # #print(STATICFILES_DIRS)
 # STATICFILES_FINDERS = (
@@ -195,7 +195,7 @@ STATICFILES_DIRS = [
 # )
 
 STATIC_URL = '/static/'
-STATIC_ROOT =  os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
+STATIC_ROOT =  os.path.join(BASE_DIR, "static_cdn")
 #STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
