@@ -195,7 +195,7 @@ STATICFILES_FINDERS = (
 )
 
 STATIC_URL = '/static/'
-STATIC_ROOT =  PROJECT_ROOT + '/static'
+STATIC_ROOT =  BASE_DIR + '/static'
 #STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
