@@ -27,7 +27,7 @@ print(BASE_DIR)
 # SECRET_KEY = 'e6%mqzzrd*0*29plyx)+jfpc1c8(hxzqmt9(n_yco@uu@k@91n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+#DEBUG = False
 ALLOWED_HOSTS = ['*']
 SITE_ID = 1
 EMAIL_HOST = 'smtp.gmail.com'
