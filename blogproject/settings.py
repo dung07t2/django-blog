@@ -30,7 +30,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = False
-ALLOWED_HOSTS = ['dunglehuy.herokuapp.com/']
+ALLOWED_HOSTS = ['dunglehuy.herokuapp.com']
 SITE_ID = 1
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
